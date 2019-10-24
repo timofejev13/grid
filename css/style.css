@@ -1,6 +1,6 @@
 :root{
-    --yellow: #fffb1f;
-    --orange: #ffa908;
+    --yellow: #c7c413;
+    --orange: #ad7308;
     --black: #000000;
 }
 
@@ -25,16 +25,50 @@ body{
 
 .party{
     grid-area: party;
+    padding-top: 10%;
     min-height: 450px;
-    background-image: url('../img/fiesta.png');
-    background-size: contain;
-    background-position: bottom;
-    background-repeat: no-repeat;
+    background-image: url('../img/hlo.jpg');
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
+.party > *{
+    background: var(--yellow);
+}
+
+.cta{
+    background: var(--yellow);
+    padding: 10px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+}
+.cta p{
+    margin: 0;
 }
 .cta1{
     grid-area: cta1;
 }
 .cta2{
     grid-area: cta2;
+}
+@media (max-width: 1000px){
+    .top{
+        grid-template-areas:
+        "party party"
+        "cta1 cta2";
+    }
+}
+@media (max-width: 420px){
+    .top{
+        grid-template-areas:
+        "party"
+        "cta1"
+        "cta2";
+    }
 }
